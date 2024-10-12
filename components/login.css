@@ -1,3 +1,55 @@
 body {
-    color: black;
+    background-color: black;
+}
+
+@font-face {
+    font-family: 'font';
+    src: url('../assets/font.otf');
+}
+.login-text {
+    font-family: 'font';
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20vh;
+    font-size: 40px;
+    color: yellow;
+}
+.login-wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10vh;
+    font-family: 'font';
+    font-size: 20px;
+    color: yellow;
+}
+
+.input-field {
+    height: 8vh;
+    width: 20vw;
+    border-radius: 20px;
+    font-size: 20px;
+    border-color: purple;
+    background-color: transparent;
+    color: white;
+    /* margin-left: 5vw; */
+    /* padding-right: 5vw; */
+    text-align: center;
+}
+
+input::placeholder {
+    color: rgba(172, 255, 47, 0.496);
+    text-align: center;
+    font-size: 15px;
+    font-family: sans-serif;
+    /* padding-left: -5vw; */
+}
+
+button {
+    width: 10vw;
+    height: 5vh;
+    border-radius: 10px;
 }

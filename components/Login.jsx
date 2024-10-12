@@ -33,24 +33,30 @@ const Login = ({ setLoginStatus }) => {
         <div className="login">
             <div className="login-text">Login</div>
             <div className="login-wrap">
-                <div className="username-text">User Name</div>
-                <div className="username-input">
-                    <input
-                        type="text"
-                        value={username}
-                        onChange={handleUsernameChange}
-                        placeholder="Enter your username"
-                    />
+                <div className="username-wrap">
+                    <div className="username-text">User Name</div>
+                    <div className="username-input">
+                        <input
+                            type="text"
+                            value={username}
+                            onChange={handleUsernameChange}
+                            placeholder="Enter your username"
+                            className="input-field"
+                        />
+                    </div>
                 </div>
-
-                <div className="password-text">Password</div>
-                <div className="password-input">
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={handlePasswordChange}
-                        placeholder="Enter your password"
-                    />
+                
+                <div className="password-wrap">
+                    <div className="password-text">Password</div>
+                    <div className="password-input">
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={handlePasswordChange}
+                            placeholder="Enter your password"
+                            className="input-field"
+                        />
+                    </div>
                 </div>
 
                 <div className="submit-btn">
