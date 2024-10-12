@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import "./login.css";
 
-const storedUsername = "q";
-const storedPassword = "q";
+const storedUsername = "3desh";
+const storedPassword = "3deshpwd";
 
 const Login = ({ setLoginStatus }) => {
     const [username, setUsername] = useState("");
