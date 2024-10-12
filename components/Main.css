@@ -1,0 +1,22 @@
+.tree-view-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sub-godowns {
+    margin-left: 2rem;
+}
+.tree-view-item-items {
+    margin-left: 2rem;
+}
+.tree-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tree-view-body-godowns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
