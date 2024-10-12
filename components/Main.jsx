@@ -1,15 +1,17 @@
 import React, { useState } from "react"; 
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "./Main.css";
 
 import godowns from "../assets/godowns.json";
 import itemss from "../assets/items.json"; 
 
-import { FaStore } from "react-icons/fa"; //<FaStore />
-import { FaFileArchive } from "react-icons/fa"; //<FaFileArchive />
+import { FaStore } from "react-icons/fa"; 
+import { FaFileArchive } from "react-icons/fa"; 
 
 const Main = () => {
     const [expandedGodowns, setExpandedGodowns] = useState([]);
     const [expandedSubGodowns, setExpandedSubGodowns] = useState([]);
+    const navigate = useNavigate(); // Use navigate for navigation
 
     const clickGodowns = (godown_id) => {   
         if (expandedGodowns.includes(godown_id)) {
@@ -27,8 +29,9 @@ const Main = () => {
         }
     };
 
-    const clickItems = (itemName) => {
-        console.log(`Clicked on item: ${itemName}`);
+    // Navigate to the Item component and pass item ID
+    const clickItems = (item) => {
+        navigate(`/item/${item.item_id}`, { state: item }); // Pass the item object in the state
     };
 
     return (
@@ -36,13 +39,13 @@ const Main = () => {
             <div className="tree-view-wrap">
                 <div className="tree-view">
                     <div className="tree-view-text">Tree view application</div>
-                    `<div className="tree-view-body-godowns">
+                    <div className="tree-view-body-godowns">
                         {godowns
                             .filter(godown => godown.parent_godown === null)
                             .map((godown) => (
                                 <div className="tree-view-item-godowns" key={godown.id}>
                                     <div 
-                                        className="tree-view-item-name" 
+                                        className="tree-view-item-name1" 
                                         onClick={() => clickGodowns(godown.id)} 
                                     >
                                         <FaStore /> {godown.name}
@@ -54,7 +57,7 @@ const Main = () => {
                                                 .map((subGodown) => (
                                                     <div className="tree-view-item-items" key={subGodown.id}>
                                                         <div 
-                                                            className="tree-view-item-name" 
+                                                            className="tree-view-item-name2" 
                                                             onClick={() => clickSubGodowns(subGodown.id)} 
                                                         >
                                                             <FaStore /> {subGodown.name}
@@ -66,8 +69,8 @@ const Main = () => {
                                                                     .map((item) => (
                                                                         <div className="tree-view-item-items" key={item.item_id}>
                                                                             <div 
-                                                                                className="tree-view-item-name" 
-                                                                                onClick={() => clickItems(item.name)} 
+                                                                                className="tree-view-item-name3" 
+                                                                                onClick={() => clickItems(item)} // Pass the whole item object
                                                                             >
                                                                                 <FaFileArchive /> {item.name}
                                                                             </div>

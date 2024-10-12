@@ -53,3 +53,27 @@ button {
     height: 5vh;
     border-radius: 10px;
 }
+@media screen and (min-width: 300px) and (max-width: 530px) {
+    .input-field {
+        width: 200px;
+    }
+    button {
+        width: 80px;
+    }
+}
+@media screen and (min-width: 531px) and (max-width: 1000px) {
+    .input-field {
+        width: 400px;
+    }
+    button {
+        width: 300px;
+    }
+}
+@media screen and (min-width: 1001px) and (max-width: 2000px) {
+    .input-field {
+        width: 700px;
+    }
+    button {
+        width: 500px;
+    }
+}

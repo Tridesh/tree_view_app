@@ -1,10 +1,18 @@
 body {
     color: white;
 }
+@font-face {
+    font-family: 'font';
+    src: url('../assets/font.otf');
+}
 .tree-view-text {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10vh;
+    font-family: 'font';
+    font-size: 40px;
+    color: yellow;
 }
 .sub-godowns {
     margin-left: 2rem;
@@ -22,4 +30,40 @@ body {
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
+}
+.tree-view-body-godowns {
+    background-color: rgb(59, 59, 59);
+    width: 40vw;
+    margin-top: 20vh;
+    margin-left: 30vw;
+    padding: 1rem;
+    border-radius: 20px;
+}
+.tree-view-item-name1 {
+    font-size: 20px;
+}
+.tree-view-item-name2 {
+    font-size: 17px;
+}
+.tree-view-item-name3 {
+    font-size: 15px;
+    
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 300px) and (max-width: 530px) {
+    .tree-view-item-name1 {
+        font-size: 18px;
+    }
+    .tree-view-body-godowns {
+        background-color: rgb(59, 59, 59);
+        width: 300px;
+        margin-top: 20vh;
+        /* margin-left: 30vw; */
+        padding: 1rem;
+        border-radius: 20px;
+    }
 }
