@@ -1,4 +1,5 @@
-
+username: 3desh
+password: 3deshpwd
 
 
 the idea of making this website basically with coditional statements with the parent_godown id and the item id
