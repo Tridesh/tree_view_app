@@ -1,5 +1,5 @@
 import React, { useState } from "react"; 
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom"; 
 import "./Main.css";
 
 import godowns from "../assets/godowns.json";
@@ -11,7 +11,7 @@ import { FaFileArchive } from "react-icons/fa";
 const Main = () => {
     const [expandedGodowns, setExpandedGodowns] = useState([]);
     const [expandedSubGodowns, setExpandedSubGodowns] = useState([]);
-    const navigate = useNavigate(); // Use navigate for navigation
+    const navigate = useNavigate(); 
 
     const clickGodowns = (godown_id) => {   
         if (expandedGodowns.includes(godown_id)) {
@@ -28,10 +28,8 @@ const Main = () => {
             setExpandedSubGodowns([...expandedSubGodowns, subgodown_id]);
         }
     };
-
-    // Navigate to the Item component and pass item ID
     const clickItems = (item) => {
-        navigate(`/item/${item.item_id}`, { state: item }); // Pass the item object in the state
+        navigate(`/item/${item.item_id}`, { state: item });
     };
 
     return (
@@ -71,7 +69,7 @@ const Main = () => {
                                                                         <div className="tree-view-item-items" key={item.item_id}>
                                                                             <div 
                                                                                 className="tree-view-item-name3" 
-                                                                                onClick={() => clickItems(item)} // Pass the whole item object
+                                                                                onClick={() => clickItems(item)} 
                                                                             >
                                                                                 <FaFileArchive /> {item.name}
                                                                             </div>

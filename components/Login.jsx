@@ -1,34 +1,27 @@
-// LoginForm.js
 'use client'
 import React, { useState } from "react";
-import "./login.css"; // Importing the CSS
+import "./login.css"; 
 
-const storedUsername = "q";   // Stored credentials for validation
+const storedUsername = "q";   
 const storedPassword = "q";
 
 const LoginForm = ({ setLoginStatus }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
-  // Handle username input change
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
   };
-
-  // Handle password input change
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
-
-  // Handle form submission and validation
   const handleSubmit = (e) => {
     e.preventDefault();
     
     if (username === storedUsername && password === storedPassword) {
-      setLoginStatus(1);  // Login successful
+      setLoginStatus(1);
     } else {
       alert("Invalid username or password");
-      setLoginStatus(0);  // Login failed
+      setLoginStatus(0); 
     }
   };
 
