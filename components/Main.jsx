@@ -39,6 +39,7 @@ const Main = () => {
             <div className="tree-view-wrap">
                 <div className="tree-view">
                     <div className="tree-view-text">Tree view application</div>
+                    <div className="list-wrap">
                     <div className="tree-view-body-godowns">
                         {godowns
                             .filter(godown => godown.parent_godown === null)
@@ -85,6 +86,8 @@ const Main = () => {
                                 </div>
                             ))}
                     </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>

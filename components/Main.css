@@ -1,18 +1,16 @@
 body {
     color: white;
 }
-@font-face {
-    font-family: 'font';
-    src: url('../assets/font.otf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 .tree-view-text {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 10vh;
-    font-family: 'font';
+    /* align-items: center; */
+    /* margin-top: 10vh; */
+    /* font-family: 'font'; */
     font-size: 40px;
-    color: yellow;
+    color: rgb(38, 38, 38);
 }
 .sub-godowns {
     margin-left: 2rem;
@@ -29,15 +27,17 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 10vh;
     /* align-items: center; */
 }
 .tree-view-body-godowns {
-    background-color: rgb(59, 59, 59);
+    background-color: rgb(0, 0, 0);
     width: 40vw;
-    margin-top: 20vh;
-    margin-left: 30vw;
+    /* margin-top: 20vh;
+    margin-left: 30vw; */
     padding: 1rem;
     border-radius: 20px;
+    color: #45f3ff;
 }
 .tree-view-item-name1 {
     font-size: 20px;
@@ -59,11 +59,22 @@ a {
         font-size: 18px;
     }
     .tree-view-body-godowns {
-        background-color: rgb(59, 59, 59);
+        background-color: rgb(0, 0, 0);
         width: 300px;
-        margin-top: 20vh;
+        /* margin-top: 20vh; */
         /* margin-left: 30vw; */
         padding: 1rem;
         border-radius: 20px;
     }
+}
+.list-wrap {
+    display: flex;
+    justify-content: center;
+
+}
+.sub-godowns {
+    color: #d9138a;
+}
+.sub-items {
+    color: #45f3ff;
 }

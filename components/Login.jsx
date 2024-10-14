@@ -1,70 +1,67 @@
+// LoginForm.js
 'use client'
 import React, { useState } from "react";
-import "./login.css";
+import "./login.css"; // Importing the CSS
 
-const storedUsername = "3desh";
-const storedPassword = "3deshpwd";
+const storedUsername = "q";   // Stored credentials for validation
+const storedPassword = "q";
 
-const Login = ({ setLoginStatus }) => {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+const LoginForm = ({ setLoginStatus }) => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
-    const handleUsernameChange = (e) => {
-        setUsername(e.target.value); 
-    };
+  // Handle username input change
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+  };
 
-    const handlePasswordChange = (e) => {
-        setPassword(e.target.value); 
-    };
+  // Handle password input change
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
 
-    const handleSubmit = (e) => {
-      
-        if (username === storedUsername && password === storedPassword) {
-            // window.localStorage.reload();
-            setLoginStatus(1); 
-        } else {
-            alert("Invalid username or password");
-            // window.localStorage.reload()
-            setLoginStatus(0); 
-        }
-    };
+  // Handle form submission and validation
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    if (username === storedUsername && password === storedPassword) {
+      setLoginStatus(1);  // Login successful
+    } else {
+      alert("Invalid username or password");
+      setLoginStatus(0);  // Login failed
+    }
+  };
 
-    return (
-        <div className="login">
-            <div className="login-text">Login</div>
-            <div className="login-wrap">
-                <div className="username-wrap">
-                    <div className="username-text">User Name</div>
-                    <div className="username-input">
-                        <input
-                            type="text"
-                            value={username}
-                            onChange={handleUsernameChange}
-                            placeholder="Enter your username"
-                            className="input-field"
-                        />
-                    </div>
-                </div>
-                
-                <div className="password-wrap">
-                    <div className="password-text">Password</div>
-                    <div className="password-input">
-                        <input
-                            type="password"
-                            value={password}
-                            onChange={handlePasswordChange}
-                            placeholder="Enter your password"
-                            className="input-field"
-                        />
-                    </div>
-                </div>
-
-                <div className="submit-btn">
-                    <button onClick={handleSubmit}>Submit</button>
-                </div>
-            </div>
+  return (
+    <div className="box">
+      <form onSubmit={handleSubmit}>
+        <div className="input-box">
+          <h2>Sign In</h2>
+          <input
+            type="text"
+            value={username}
+            onChange={handleUsernameChange}
+            required
+          />
+          <span>Username</span>
+          <i></i>
         </div>
-    );
+        <div className="input-box">
+          <input
+            type="password"
+            value={password}
+            onChange={handlePasswordChange}
+            required
+          />
+          <span>Enter Password</span>
+          <i></i>
+        </div>
+        <input type="submit" value="Login" />
+        <div className="links">
+        </div>
+      </form>
+    </div>
+  );
 };
 
-export default Login;
+export default LoginForm;
