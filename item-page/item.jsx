@@ -34,7 +34,7 @@ const Item = () => {
                 </div>
             </div>     
             
-            {/* You can add more fields as needed */}
+        
         </div>
     );
 };
