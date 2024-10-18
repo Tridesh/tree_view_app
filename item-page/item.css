@@ -23,6 +23,7 @@ h1 {
     justify-content: center;
     text-align: center;
     font-family: 'font';
+    color: brown;
 }
 @media screen and (min-width: 300px) and (max-width: 530px) {
     img {

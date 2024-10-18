@@ -11,7 +11,7 @@ import { MdOutlineEventAvailable } from "react-icons/md";
 import { TbBrandAirtable } from "react-icons/tb";
 
 const Item = () => {
-    const { itemId } = useParams(); // Get itemId from the URL
+    const itemId  = useParams(); // Get itemId from the URL
     const location = useLocation(); // Get item details passed via state
     const item = location.state; // Retrieve the item object from the state
 
